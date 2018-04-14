@@ -1,0 +1,54 @@
+{
+  "name": "vue-webpack-starter-kit",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "NODE_ENV=development ENVIRONMENT=development webpack-serve --config ./webpack/serve.config.js --hot",
+    "build": "NODE_ENV=production ENVIRONMENT=production webpack --config ./webpack/build.config.js",
+    "build-debug": "NODE_ENV=production DEBUG=true ENVIRONMENT=production webpack --config ./webpack/build.config.js",
+    "deploy": "cd deploy && firebase use default && firebase deploy",
+    "view-build-report": "open \"build-report.html\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://pierbover@github.com/PierBover/vue-webpack-starter-kit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PierBover/vue-webpack-starter-kit/issues"
+  },
+  "homepage": "https://github.com/PierBover/vue-webpack-starter-kit#readme",
+  "dependencies": {
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "connect-history-api-fallback": "^1.5.0",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "koa-connect": "^2.0.1",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.8.3",
+    "optimize-css-assets-webpack-plugin": "^4.0.0",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "url-loader": "^1.0.1",
+    "vue-loader": "^14.2.2",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-merge": "^4.1.2",
+    "webpack-serve": "^0.3.1",
+    "webpack-visualizer-plugin": "^0.1.11"
+  }
+}
