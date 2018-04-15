@@ -10,13 +10,35 @@ Another Vue starter kit.
 * Folder structure designed for deploying to Firebase hosting.
 * Build report with Webpack Visualizer.
 
+### Folder structure
+
+```bash
+├── deploy              # Firebase hosting deploy folder
+│    ├── public         # Hosting root folder (where webpack builds)
+│    ├── .firebaserc    # Firebase project deploy config
+│    ├── firebase.json  # Firebase hosting config
+├── environments
+├── src
+│    ├── assets
+│    ├── components
+│    ├── mediators
+│    ├── services
+│    |    ├── api
+│    |    ├── router
+│    |    ├── store
+│    |    └── utils
+│    └── App.vue        # Root Vue component
+│    └── main.js        # entry point of the Vue application
+└── webapack            # Webpack configs
+```
+
 ### Init
-Add your Firebase project name to `deploy/.firebasesrc` and don't forget to `npm i`.
+Add your Firebase project name to `deploy/.firebasesrc` and `npm i`.
 
 ### Environments
-The environment configurations are in `/environments`. The configuration will be available in the `process.env` global object. Since these are added to the Vue app using Webpack's [DefinePlugin](https://webpack.js.org/plugins/define-plugin/) your data has to be stringified. So instead of `"something"` you need to do `'"something"'` or `JSON.stringify("something")`.
+The environment configs are in `/environments`. The config will be available in the `process.env` global object. Since these are added to the Vue app using Webpack's [DefinePlugin](https://webpack.js.org/plugins/define-plugin/) your data has to be stringified. So instead of `"something"` you need to do `'"something"'` or `JSON.stringify("something")`.
 
-By default, the dev server will use the development environment and building will use the production environment. You can select which environment configuration to use with the variable `ENVIRONMENT=development` in the scripts of `package.json`.
+By default, the dev server will use the development environment and building will use the production environment. You can select which environment config to use with the variable `ENVIRONMENT=development` in the scripts of `package.json`.
 
 You can create new environments by creating a `webpack/environments/whatever.js` file and then changing `ENVIRONMENT=whatever` in `package.json`.
 
