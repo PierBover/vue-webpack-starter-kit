@@ -11,5 +11,8 @@ module.exports = merge(baseConfig, serveConfig);
 module.exports.serve = {
 	add: (app, middleware, options) => {
 		app.use(convert(history({})));
+	},
+	dev: {
+		stats: 'minimal'
 	}
 }
