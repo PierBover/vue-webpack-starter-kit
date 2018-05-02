@@ -21,9 +21,9 @@ module.exports = {
 		extensions: ['.js', '.vue', '.json'],
 		alias: {
 			'components': path.resolve(__dirname, '../src/components'),
-			'services': path.resolve(__dirname, '../src/services'),
-			'store': path.resolve(__dirname, '../src/services/store'),
-			'router': path.resolve(__dirname, '../src/services/router')
+			'modules': path.resolve(__dirname, '../src/modules'),
+			'store': path.resolve(__dirname, '../src/modules/store'),
+			'router': path.resolve(__dirname, '../src/modules/router')
 		}
 	},
 	module: {
