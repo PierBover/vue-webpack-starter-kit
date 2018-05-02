@@ -21,12 +21,12 @@ Another Vue starter kit.
 ├── src
 │    ├── assets
 │    ├── components
-│    ├── mediators
-│    ├── services
-│    |    ├── api
-│    |    ├── router
-│    |    ├── store
-│    |    └── utils
+│    ├── mediators      # Application mediators
+│    ├── modules        # Application modules
+│    |    ├── api       # Example folder
+│    |    ├── router    # Global vue router
+│    |    ├── store     # Global Vuex store
+│    |    └── utils     # Example folder
 │    └── App.vue        # Root Vue component
 │    └── main.js        # entry point of the Vue application
 └── webapack            # Webpack configs
