@@ -29,6 +29,18 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.(js|vue)$/,
+				exclude: /node_modules/,
+				loader: 'eslint-loader',
+				enforce: 'pre',
+				options: {
+					formatter: require('eslint-friendly-formatter'),
+					emitError: true,
+					emitWarning: true,
+					failOnError: true
+				}
+			},
+			{
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: {
