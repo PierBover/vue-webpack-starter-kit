@@ -15,7 +15,8 @@ module.exports = {
 	entry: ENTRY,
 	output: {
 		path: OUTPUT,
-		filename: 'js/[hash].js'
+		filename: 'js/[hash].js',
+		publicPath: '/'
 	},
 	resolve: {
 		extensions: ['.js', '.vue', '.json'],
