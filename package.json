@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "NODE_ENV=development ENVIRONMENT=development webpack-serve --config ./webpack/serve.config.js --hot --open",
+    "serve": "NODE_ENV=development ENVIRONMENT=development webpack-serve --config ./webpack/serve.config.js --hot",
     "build": "NODE_ENV=production ENVIRONMENT=production webpack --config ./webpack/build.config.js",
     "build-debug": "NODE_ENV=production DEBUG=true ENVIRONMENT=production webpack --config ./webpack/build.config.js",
     "deploy": "cd deploy && firebase use default && firebase deploy",
